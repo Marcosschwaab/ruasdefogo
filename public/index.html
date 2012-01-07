@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en-GB" dir="ltr">
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28175639-1']);
+  _gaq.push(['_setDomainName', 'ruasdefogo.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    <head>
+		<title>Ruas de Fogo | Maior e melhor torcida do Rio Grande do Sul</title>
+		<meta charset="utf-8">
+		<link href="themes/ui-darkness/jquery-ui-1.8.12.custom.css" rel="stylesheet" media="screen">
+		<link href="themes/jquery.videobackground.css" rel="stylesheet" media="screen">
+		<LINK REL="SHORTCUT ICON" HREF="ruasdefogo.ico"> 
+		<style>
+			/*
+			 * Page specific styling.
+			 *
+			 */
+			body {
+				margin: 0;
+				font-family: arial, helvetica, sans-serif;
+			}
+			a {
+				color: #FFF;
+			}
+			h2 {
+				font-size: 20px;
+				font-weight: normal;
+			}
+			li {
+				list-style: none;
+			}
+			dl {
+
+			}
+			dt {
+				float: left;
+				width: 160px;
+			}
+			dd {
+				margin: 0 0 10px 160px;
+			}
+			/*
+			 * If developing a full page background the styles from .video-background will be required.
+			 * The classname itself is unimportant.
+			 *
+			 */
+			.video-background {
+				position: absolute;
+				top: 0;
+				left: 0;
+				overflow: hidden;
+				width: 130%;
+				height: 130%;
+				z-index: 0;
+			}
+			.video-background video {
+				min-height: 100%; 
+				min-width:100%; 
+			}
+			#page {
+				position: relative; 
+				z-index: 1;
+				width: 800px;
+				color: #FFF;
+				background: transparent url(themes/background.png) repeat top left;
+				border-radius: 10px;
+				margin: 0 auto;
+			}
+			#main {
+				padding: 20px;
+				margin: 10px 0;
+			}
+		</style>
+		<script src="external/jquery.js"></script>
+		<script src="script/jquery.videobackground.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('dl').toggle();
+				$('h2').bind('click', function(event) {
+					event.preventDefault();
+					$(this).next('dl').slideToggle(500, function() {
+						$('.video-background').videobackground('resize');
+					});
+				});
+				$('body').prepend('<div class="video-background"></div>');
+				$('.video-background').videobackground({
+					videoSource: ['video/ruasdefogo.mp4', 
+						'video/ruasdefogo.ogv'], 
+					controlPosition: '#main',
+					poster: 'video/ruasdefogo.jpg',
+					loadedCallback: function() {
+						$(this).videobackground('mute', {controlPosition: '#main'});
+					}
+				});
+			});
+		</script>
+    </head>
+    <body>	
+		<div id="page">
+			<div id="page-group">
+				<div id="header" class="header" role="banner" >
+					
+				</div>
+				<div id="content">
+					<div id="main" role="main">
+	<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fplatform&amp;width=292&amp;height=62&amp;colorscheme=light&amp;show_faces=false&amp;border_color&amp;stream=false&amp;header=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:62px;" allowTransparency="true"></iframe>
+					<img src="video/logo.png" alt="descrição_da_imagem">
+				
+			<div id="ruas_twitter">
+				<script type="text/javascript" src="script/twitStream.js"></script>
+				<script type="text/javascript">
+				showTweetLinks='all';
+				</script>
+				<link rel="stylesheet" href="themes/twit-stream.css" />
+				<p>Confira a lista dos últimos twitts #ruasdefogo</p>
+				<div class="twitStream 5" id="tweets" title="#ruasdefogo"></div>
+				</div>
+
+					</div>
+					<div id="aside" class="aside" role="complementary">
+					</div>
+				</div>
+			</div>
+			<div id="footer" class="footer" role="contentinfo">
+				
+			</div>
+		</div>
+    </body>
+</html>
