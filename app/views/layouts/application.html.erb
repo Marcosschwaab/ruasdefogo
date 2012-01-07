@@ -117,7 +117,26 @@
 				</div>
 				<div id="content">
 					<div id="main" role="main">
-<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fruasdefogo.com&amp;width=292&amp;height=62&amp;colorscheme=light&amp;show_faces=false&amp;border_color&amp;stream=false&amp;header=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:62px;" allowTransparency="true"></iframe>
+						<!-- Coloque esta tag onde você deseja que o botão +1 seja renderizado -->
+
+						<!-- Coloque esta chamada de renderização conforme necessário -->
+						<script type="text/javascript">
+						  window.___gcfg = {lang: 'pt-BR'};
+
+						  (function() {
+						    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+						    po.src = 'https://apis.google.com/js/plusone.js';
+						    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+						  })();
+						</script>
+								<g:plusone size="medium"></g:plusone>
+								<div style='width:205px;float:left;margin:1px 4px 2px 3px;height:20px;'><script type="text/javascript"><!--
+								urlb=window.location.href;
+								document.write("<iframe src='//www.facebook.com/plugins/like.php?href="+urlb+"&amp;layout=button_count&amp;action=like&amp;font=arial' scrolling='no' frameborder='0' allowtransparency='true' style='width:90px;overflow:hidden;height:20px;'></iframe>");
+								//--></script>
+								<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal"  data-text="A maior e melhor torcida do Rio Grande do Sul" rel="nofollow" data-via="_ruasdefogo">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+								</div>
+
 					<img src="video/logo.png" alt="descrição_da_imagem">
 				
 			<div id="ruas_twitter">
@@ -136,7 +155,7 @@
 				</div>
 			</div>
 			<div id="footer" class="footer" role="contentinfo">
-				TESTE
+				
 			</div>
 		</div>
 <%= yield %>
