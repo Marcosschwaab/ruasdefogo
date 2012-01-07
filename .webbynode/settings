@@ -1,2 +1,3 @@
 engine=rails3
+dns_alias='www.ruasdefogo.com'
 rails3_adapter=mysql2
