@@ -63,8 +63,8 @@
 				top: 0;
 				left: 0;
 				overflow: hidden;
-				width: 130%;
-				height: 130%;
+				width: 110%;
+				height: 110%;
 				z-index: 0;
 			}
 			.video-background video {
@@ -104,7 +104,7 @@
 					controlPosition: '#main',
 					poster: 'video/ruasdefogo.jpg',
 					loadedCallback: function() {
-						$(this).videobackground('mute', {controlPosition: '#main'});
+						$(this).videobackground('on', {controlPosition: '#main'});
 					}
 				});
 			});
